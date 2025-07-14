@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latihan_provider/home.dart';
+import 'package:latihan_provider/login.dart';
 import 'package:latihan_provider/provider.dart';
 import 'package:provider/provider.dart' as provider;
 
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Latihan Provider',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
         ),
-        home: HomePage(),
+        home: LoginPage(),
       ),
     );
   }
