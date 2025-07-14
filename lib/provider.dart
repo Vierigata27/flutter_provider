@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:riverpod/riverpod.dart';
 
 class CounterModel extends ChangeNotifier{
   int _counter = 0;
@@ -14,3 +15,7 @@ class CounterModel extends ChangeNotifier{
     notifyListeners();
   }
 }
+
+final counterProvider = StateProvider<int>((ref) {
+  return 0;
+});

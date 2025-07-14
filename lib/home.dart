@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latihan_provider/provider.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/provider.dart' as provider;
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final angkaRiverpod = ref.watch(counterProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('latihan Provider'),
       ),
+
     body: Center(
-      child: Consumer(
-        builder: (context, CounterModel v, child) {
-          return Text(
-            v.counter.toString(),
+      child: 
+        Text(
+          angkaRiverpod.toString(),
             style: TextStyle(
               fontSize: 100,
-            ),
-          );
-        }
+          ),
+        ),
       ),
-    ),
 
     floatingActionButton: 
     Padding(
@@ -33,7 +33,8 @@ class HomePage extends StatelessWidget {
           FloatingActionButton(
             onPressed: (){
               //Todo: menambahkan angka
-              context.read<CounterModel>().increment();
+              // context.read<CounterModel>().increment();
+              ref.read(counterProvider.notifier).state +=1;
             },
             child: Icon(
               Icons.add,
@@ -43,7 +44,8 @@ class HomePage extends StatelessWidget {
            FloatingActionButton(
             onPressed: (){
               //Todo: mengurangi angka
-              context.read<CounterModel>().decrement();
+              // context.read<CounterModel>().decrement();
+              ref.read(counterProvider.notifier).state -=1;
             },
             child: Icon(
               Icons.remove,

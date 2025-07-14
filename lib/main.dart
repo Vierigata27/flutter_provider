@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latihan_provider/home.dart';
 import 'package:latihan_provider/provider.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/provider.dart' as provider;
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
+    return provider.ChangeNotifierProvider(
       create: (context) => CounterModel(),
       child: MaterialApp(
         title: 'Latihan Provider',
