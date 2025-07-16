@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:latihan_provider/home.dart';
-import 'package:latihan_provider/login.dart';
-import 'package:latihan_provider/provider.dart';
+import 'package:latihan_provider/Provider/home.dart';
+import 'package:latihan_provider/Provider/login.dart';
+import 'package:latihan_provider/Provider/provider.dart';
+import 'package:latihan_provider/utama.dart';
 import 'package:provider/provider.dart' as provider;
 
 void main() {
@@ -17,11 +18,13 @@ class MyApp extends StatelessWidget {
     return provider.ChangeNotifierProvider(
       create: (context) => CounterModel(),
       child: MaterialApp(
-        title: 'Latihan Provider',
+        // title: 'Latihan Provider',
+        title: 'Latihan Todo App',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         ),
-        home: LoginPage(),
+        // home: LoginPage(),
+        home: Utama(),
       ),
     );
   }

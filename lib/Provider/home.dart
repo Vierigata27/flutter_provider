@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:latihan_provider/provider.dart';
+import 'package:latihan_provider/Provider/provider.dart';
 import 'package:provider/provider.dart' as provider;
 
 class HomePage extends ConsumerWidget {
