@@ -3,7 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latihan_provider/Provider/home.dart';
 import 'package:latihan_provider/Provider/login.dart';
 import 'package:latihan_provider/Provider/provider.dart';
-import 'package:latihan_provider/utama.dart';
+import 'package:latihan_provider/database_latihan/utama.dart';
+import 'package:latihan_provider/akses_Camera&Storage/halmedia.dart';
 import 'package:provider/provider.dart' as provider;
 
 void main() {
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         ),
         // home: LoginPage(),
-        home: Utama(),
+        // home: Utama(),
+        home: Halmedia(),
       ),
     );
   }
