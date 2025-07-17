@@ -6,6 +6,7 @@ import 'package:latihan_provider/Provider/provider.dart';
 import 'package:latihan_provider/database_latihan/utama.dart';
 import 'package:latihan_provider/akses_Camera&Storage/halmedia.dart';
 import 'package:latihan_provider/akses_googlemaps/maps.dart';
+import 'package:latihan_provider/halaman_animasi/hal_animasi.dart';
 import 'package:provider/provider.dart' as provider;
 
 void main() {
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         // home: Utama(),
         // home: Halmedia(),
         // home: MapSample(),
+        // home: HalAnimasi(),
       ),
     );
   }
