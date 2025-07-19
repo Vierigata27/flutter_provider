@@ -1,3 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:latihan_provider/service/fcm_service.dart';
+import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latihan_provider/Provider/home.dart';
@@ -7,9 +10,26 @@ import 'package:latihan_provider/database_latihan/utama.dart';
 import 'package:latihan_provider/akses_Camera&Storage/halmedia.dart';
 import 'package:latihan_provider/akses_googlemaps/maps.dart';
 import 'package:latihan_provider/halaman_animasi/hal_animasi.dart';
+import 'package:latihan_provider/screens/notification_screen.dart';
+import 'package:latihan_provider/service/notification_service.dart';
 import 'package:provider/provider.dart' as provider;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  //ns
+  final NotificationService ns = NotificationService();
+  await ns.init();
+
+  //fcm
+  final FcmService fcmService = FcmService();
+  await fcmService.initialize();
+
+
   runApp(ProviderScope(child: const MyApp()));
 }
 
@@ -31,6 +51,7 @@ class MyApp extends StatelessWidget {
         // home: Halmedia(),
         // home: MapSample(),
         // home: HalAnimasi(),
+        home: NotificationScreen(),
       ),
     );
   }

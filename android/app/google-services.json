@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "349048800767",
+    "project_id": "notifikasi-dbe00",
+    "storage_bucket": "notifikasi-dbe00.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349048800767:android:2a8cc9b16111a0adcb53ca",
+        "android_client_info": {
+          "package_name": "com.example.latihan_provider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjrIpo00o8kgs8VlC5YCxw1XYrHMyd1JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
