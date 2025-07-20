@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:latihan_provider/service/fcm_service.dart';
-import 'firebase_options.dart';
+import 'firebase/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:latihan_provider/Provider/home.dart';

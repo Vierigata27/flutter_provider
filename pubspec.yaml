@@ -46,6 +46,8 @@ dependencies:
   flutter_local_notifications: ^19.3.1
   firebase_core: ^3.15.1
   firebase_messaging: ^15.2.4
+  json_annotation: ^4.9.0
+
   
 
 
@@ -60,6 +62,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  json_serializable: ^6.10.0
+  build_runner: ^2.6.0
+  freezed: ^3.2.0
+  freezed_annotation: ^3.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
