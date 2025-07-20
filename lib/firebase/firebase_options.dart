@@ -50,16 +50,16 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAjrIpo00o8kgs8VlC5YCxw1XYrHMyd1JU',
-    appId: '1:349048800767:android:2a8cc9b16111a0adcb53ca',
+    apiKey: '***',
+    appId: '***',
     messagingSenderId: '349048800767',
     projectId: 'notifikasi-dbe00',
     storageBucket: 'notifikasi-dbe00.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD2tkqIN4nYchaZC9jH07by6L0Zk6GbVFo',
-    appId: '1:349048800767:ios:75f85b571dbb1500cb53ca',
+    apiKey: '***',
+    appId: '***',
     messagingSenderId: '349048800767',
     projectId: 'notifikasi-dbe00',
     storageBucket: 'notifikasi-dbe00.firebasestorage.app',

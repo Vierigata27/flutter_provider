@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_provider/halaman_animasi/hal_animasi2.dart';
+// ignore: unused_import
 import 'package:path/path.dart';
 
 class HalAnimasi extends StatefulWidget {
