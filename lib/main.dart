@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:latihan_provider/hal_transaksi/pay_page.dart';
 import 'package:latihan_provider/providers/chat_providers.dart';
 import 'package:latihan_provider/screens/chat_screens.dart';
 import 'package:latihan_provider/service/fcm_service.dart';
@@ -66,7 +67,8 @@ class MyApp extends StatelessWidget {
       // home: MapSample(),
       // home: HalAnimasi(),
       // home: NotificationScreen(),
-      home: const ChatScreens(), // Menggunakan const karena widget tidak berubah // Sembunyikan banner "DEBUG"
+      // home: const ChatScreens(),
+      home: PaymentPage(), // Menggunakan const karena widget tidak berubah // Sembunyikan banner "DEBUG"
     );
   }
 }
