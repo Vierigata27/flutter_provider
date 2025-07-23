@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:latihan_provider/Hal_Deep_Linking/router/app_router.dart';
 import 'package:latihan_provider/hal_transaksi/pay_page.dart';
 import 'package:latihan_provider/providers/chat_providers.dart';
 import 'package:latihan_provider/screens/chat_screens.dart';
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final router = AppRouter.getRouter();
+    return MaterialApp.router(
       title: 'Latihan Chat AI', // Judul aplikasi yang lebih relevan
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
@@ -68,7 +70,8 @@ class MyApp extends StatelessWidget {
       // home: HalAnimasi(),
       // home: NotificationScreen(),
       // home: const ChatScreens(),
-      home: PaymentPage(), // Menggunakan const karena widget tidak berubah // Sembunyikan banner "DEBUG"
+      // home: PaymentPage(), // Menggunakan const karena widget tidak berubah // Sembunyikan banner "DEBUG"
+      routerConfig: router,
     );
   }
 }
