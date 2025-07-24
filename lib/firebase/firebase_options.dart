@@ -54,7 +54,7 @@ class DefaultFirebaseOptions {
     appId: '***',
     messagingSenderId: '349048800767',
     projectId: 'notifikasi-dbe00',
-    storageBucket: 'notifikasi-dbe00.firebasestorage.app',
+    storageBucket: 'notifikasi-dbe00.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -62,7 +62,8 @@ class DefaultFirebaseOptions {
     appId: '***',
     messagingSenderId: '349048800767',
     projectId: 'notifikasi-dbe00',
-    storageBucket: 'notifikasi-dbe00.firebasestorage.app',
+    storageBucket: 'notifikasi-dbe00.appspot.com',
     iosBundleId: 'com.example.latihanProvider',
   );
+
 }

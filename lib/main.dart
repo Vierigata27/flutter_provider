@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:latihan_provider/Hal_Deep_Linking/router/app_router.dart';
+import 'package:latihan_provider/Solid_OOP/screens/kalkulator_screen.dart';
 import 'package:latihan_provider/hal_transaksi/pay_page.dart';
 import 'package:latihan_provider/providers/chat_providers.dart';
 import 'package:latihan_provider/screens/chat_screens.dart';
@@ -28,13 +29,13 @@ Future<void> main() async {
   //   options: DefaultFirebaseOptions.currentPlatform,
   // );
 
+  // Inisialisasi FCM Service
+  // final FcmService fcmService = FcmService();
+  // await fcmService.initialize();
+
   // Inisialisasi Notification Service
   final NotificationService ns = NotificationService();
   await ns.init();
-
-  // Inisialisasi FCM Service
-  final FcmService fcmService = FcmService();
-  await fcmService.initialize();
 
   // Muat variabel lingkungan dari file .env
   await dotenv.load(fileName: ".env");
@@ -56,12 +57,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final router = AppRouter.getRouter();
-    return MaterialApp.router(
-      title: 'Latihan Chat AI', // Judul aplikasi yang lebih relevan
+    final int a = 2;
+    //menggunakan route
+    if(a == 1){
+      final router = AppRouter.getRouter();
+      return MaterialApp.router(
+      title: 'Latihan Route', // Judul aplikasi yang lebih relevan
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true, // Direkomendasikan untuk Material Design 3
+      ),
+      routerConfig: router,
+    );
+    }
+    else{ //menggunakan langsung page
+    return MaterialApp(
+      title: 'Latihan Kalkulator OOp', // Judul aplikasi yang lebih relevan
+      theme: ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+      useMaterial3: true, // Direkomendasikan untuk Material Design 3
       ),
       // home: LoginPage(),
       // home: Utama(),
@@ -70,8 +84,9 @@ class MyApp extends StatelessWidget {
       // home: HalAnimasi(),
       // home: NotificationScreen(),
       // home: const ChatScreens(),
-      // home: PaymentPage(), // Menggunakan const karena widget tidak berubah // Sembunyikan banner "DEBUG"
-      routerConfig: router,
+      //home: PaymentPage(),
+      home: KalkulatorScreen(),
     );
+    }
   }
 }
